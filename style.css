@@ -3,86 +3,128 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-nav {
-    background-color: black;
-    color: white;
-    padding: 12px 3px;
-    display: flex;
-    justify-content: space-between;
+/* Main Container */
+.container {
+    max-width: 90vw;
+    margin: 30px auto;
+    background-color: #1e1e2f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
 }
 
-.logo{
-    margin: 0 23px;
+/* Navigation Bar */
+nav {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.logo {
     font-weight: 800;
-    font-size: 25px;
+    font-size: 24px;
+    color: #00adb5;
     cursor: pointer;
 }
 
 ul {
     display: flex;
-    margin: 0 23px;
     align-items: center;
 }
 
 ul > li {
     list-style: none;
-    margin: 0 13px;
+    margin: 0 15px;
     cursor: pointer;
+    color: #e0e0e0;
 }
 
-ul > li:hover{
-    color: white;
-
+ul > li:hover {
+    color: #00adb5;
 }
 
-table, td, tr{
-    border: 2px solid black;
-    border-collapse: collapse;
-    padding: 5px 13px;
-}
-
-.container {
-    max-width: 80vw;
-    margin: 23px auto;
-}
-
+/* Heading Styles */
 h1, h2, h3 {
-    margin: 23px 0;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.btn{
-    padding: 8px 17px;
-    background: black;
-    color: white;
-    font-weight: 900;
-    border: 2px solid gray;
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #2e2e3e;
+    color: #ffffff;
     border-radius: 8px;
-    margin: 25px 0;
-    cursor: pointer;
+    overflow: hidden;
 }
 
-.btnsm{ 
-    padding: 8px 17px;
-    background: black;
-    color: white;
-    font-weight: 900;
-    border: 2px solid gray;
-    border-radius: 8px; 
-    cursor: pointer;
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    text-align: left;
 }
 
-img{
-    cursor: pointer;
-    position: relative;
-    bottom: 7px;
-    width: 15px;
-    height: 13px;
+th {
+    background-color: #1f1f30;
+    color: #00adb5;
 }
 
-#alert{
+tr:hover {
+    background-color: #35354f;
+}
+
+/* Button Styles */
+.btn, .btnsm {
+    padding: 10px 20px;
+    background-color: #00adb5;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover, .btnsm:hover {
+    background-color: #028c91;
+}
+
+.btnsm {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+/* Alert Message */
+#alert {
     display: none;
+    background-color: #00adb5;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+/* Copy Icon */
+img {
+    cursor: pointer;
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+    filter: invert(70%);
+}
+
